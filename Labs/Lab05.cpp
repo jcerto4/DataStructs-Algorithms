@@ -1,7 +1,7 @@
 //Joe Certo
-//##/##/####
+//9/25/2025
 //Lab05.cpp
-//This lab....
+//This lab aims to empirically measure the time complexity of algorithms using a doubling experiment
 
 #include <cstdlib> 
 #include <ctime> 
@@ -22,6 +22,7 @@ long elapsed_time(chrono::steady_clock::time_point start_time) {
     return ms.count();
 }
 
+//Helper function to double the size
 void doubleSize(vector<int>& a, int size){
     int currentSize = a.size();
     for(int i = 0; i < size - currentSize; i++){
@@ -29,6 +30,7 @@ void doubleSize(vector<int>& a, int size){
     }
 }
 
+//Checks whether a pair ==0 and then increments count, does not repeat pairs
 int two_sum(vector<int>& a){
     int count = 0;
     for(int i = 0; i < a.size(); i++){
@@ -41,6 +43,7 @@ int two_sum(vector<int>& a){
     return count;
 }
 
+//Similarily, checks for three values ==0, does not repeat values
 int three_sum(vector<int>& a){
     int count = 0;
     for(int i = 0; i < a.size(); i++){
@@ -81,8 +84,7 @@ int main(){
     //Three-Sum Tests
     ofstream threeSumOut("three_sum_results.csv");
     threeSumOut << ("Size,Elapsed(ms)") << endl;
-    int& threeSumSize = twoSumSize;
-    threeSumSize = 250;
+    int threeSumSize = 250;
     vector<int> threeSumVec;
     
     for(int i = 0; i < threeSumSize; i++){
