@@ -1,7 +1,8 @@
 //Joe Certo
 //10/29/2025
-//BST.h
-//The purpose of this is to....
+//Lab09.cpp
+//The purpose of this lab is to see the difference between balanced and skewed trees 
+//while searching for values that do not exist
 
 /*
 Experiment 1: 1175

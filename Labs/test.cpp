@@ -3,12 +3,17 @@
 
 using namespace std;
 
-int main(){
-    array<int, 3> scores = {0, 10, 20};
+int ProdEven(int n){
+    if(n==1){
+        return 2;
+    }
+    return (2*n) * ProdEven(n - 1);
+}
 
-    cout << scores[0] << endl;
-    ++scores[0];
-    cout << scores[0] << endl;
+int main(){
+   
+    int test = ProdEven(3);
+    cout << test;
 
 }
 

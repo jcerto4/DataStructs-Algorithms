@@ -1,7 +1,7 @@
 //Joe Certo
 //10/29/2025
 //BST.h
-//The purpose of this is to....
+//The purpose of this is to create a node and bst class to insert and search a tree recursievly
 
 #ifndef BST_H
 #define BST_H
